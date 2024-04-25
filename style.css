@@ -1,0 +1,262 @@
+:root {
+  --primary-color: #adf0d4;
+  --secondary-color: #1fd8a4;
+  --bg-color: #0d1512;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'inter', sans-serif;
+  transition-duration: 200ms;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  min-width: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  padding: 14px;
+}
+
+.darkerText {
+  color: var(--secondary-color);
+}
+
+header, 
+main, 
+footer {
+  max-width: 700;
+  margin: 0 auto;
+  width: 100%;
+}
+
+p {
+  font-size: 1.05em;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+nav {
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+nav a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+main,
+section,
+.Main {
+  display: flex;
+  flex-direction: column;
+}
+
+.Main {
+  gap: 8px;
+}
+
+main {
+  gap: 64px;
+  padding-bottom:64px;
+}
+
+section {
+  gap: 32px;
+}
+
+.Picture {
+  border-radius: 100%;
+  max-width: 114px;
+  overflow: hidden;
+}
+
+.Picture img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.Stats{
+ display: flex;
+ align-items: stretch;
+ gap: 24px;
+}
+
+.Childstats{
+  display: flex;
+  flex-direction: column;
+  gap: 14px
+}
+
+.Childstats>div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.Childstats div i {
+  font-size: 1.4em;
+}
+
+.Childstats div div {
+  display: grid;
+  place-items: center;
+  min-width: 40px;
+}
+
+.Me {
+  line-height: 1.5em;
+
+}
+
+.Reach {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  width: fit-content;
+  margin-right: auto;
+
+}
+
+.Reach i {
+  transform: rotate(-45deg);
+}
+
+.Reach:hover {
+  opacity: 0.7;
+}
+
+.Mainproject {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.Eachproject {
+   display: flex;
+   align-items: stretch;
+   gap: 24px;
+}
+
+.Eachproject div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.Eachproject>div:last-child {
+  aspect-ratio: 16/9;
+  max-width: 30%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.Eachproject>div:last-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headerText{
+  margin-bottom: 24px;
+}
+
+.linkcontainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+
+.Linkitem {
+ display: flex;
+ flex-direction: row !important;
+ align-items: center;
+ gap: 8px !important;
+ color: var(--primary-color);
+ text-decoration: none;
+ cursor: pointer;
+}
+
+.linkItem:hover {
+  opacity: 0.7;
+}
+
+.linkItem p {
+  font-size: 0.9em;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 10px; /* Adjust the padding for smaller screens */
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  main, section, .Main, .Mainproject, .Eachproject, .Eachproject>div:last-child {
+    gap: 20px;
+  }
+
+  .Eachproject {
+    flex-direction: column;
+  }
+
+  .Eachproject>div:last-child {
+    max-width: 100%;
+    aspect-ratio: auto;
+  }
+
+  .Me {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .Stats {
+    flex-direction: column;
+  }
+
+  .Childstats {
+    gap: 10px;
+  }
+
+  .Reach {
+    width: 100%;
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .Linkitem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+

@@ -205,6 +205,10 @@ section {
   font-size: 0.9em;
 }
 
+.Test {
+  font-size: 0.9em;
+}
+
 @media (max-width: 640px) {
   body {
     padding: 10px; /* Adjust the padding for smaller screens */
